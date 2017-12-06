@@ -333,8 +333,7 @@ class LabHub(BotPlugin):
                            'issue. :tada:')
                 else:
                     yield 'You are not eligible to be assigned to this issue.'
-                    yield '\n'.join(
-                        bility_conditions)
+                    yield '\n'.join(eligibility_conditions)
             elif user in iss.assignees:
                 yield ('The issue is already assigned to you.')
             else:
