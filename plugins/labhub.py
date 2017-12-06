@@ -312,7 +312,7 @@ class LabHub(BotPlugin):
                     return False
             return True
 
-        eligility_conditions = [
+        eligibility_conditions = [
             '- You must be a member of {} org to be assigned an issue '
             'If you are not a member yet, just type Hello World and '
             'corobo will invite you.'.format(self.GH_ORG_NAME),
@@ -333,7 +333,8 @@ class LabHub(BotPlugin):
                            'issue. :tada:')
                 else:
                     yield 'You are not eligible to be assigned to this issue.'
-                    yield '\n'.join(eligility_conditions)
+                    yield '\n'.join(
+                        bility_conditions)
             elif user in iss.assignees:
                 yield ('The issue is already assigned to you.')
             else:
